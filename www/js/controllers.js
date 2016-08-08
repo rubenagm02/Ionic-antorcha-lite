@@ -7,10 +7,23 @@ var app = angular.module('app.controllers', [])
 
   })
 
-  .controller('misActividadesCtrl', function($scope) {
+  .controller('pageb2Ctrl', function($scope, $location) {
 
+    var inicio = window.localStorage.getItem("inicio");
+
+    if (inicio = "iniciado") {
+      $location.path('/page1/page10');
+    }
+
+    $scope.iniciar = function () {
+      window.localStorage.setItem("inicio", "iniciado");
+      $location.path('/page1/page10');
+    }
   })
 
+.controller('misActividadesCtrl', function($scope) {
+
+  })
 
   .controller('misEventosCtrl', function($scope) {
     $scope.eventos = JSON.parse(window.localStorage.getItem("eventos"));

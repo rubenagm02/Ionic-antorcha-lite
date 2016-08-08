@@ -267,7 +267,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-$urlRouterProvider.otherwise('/page1/page10');
+$urlRouterProvider.otherwise('/pageb');
 
 
 

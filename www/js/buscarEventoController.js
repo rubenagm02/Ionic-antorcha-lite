@@ -3,7 +3,7 @@ var app = angular.module('app.controllers')
 .controller('buscarEventosCtrl', function($scope, $http, $location) {
 	//http://api.antorcha.mx/V0.1/eventosDeportivos
 	var credenciales = {};
-
+    
     $http({
         method : "GET",
         url : "http://api.antorcha.mx/V0.1/eventosDeportivos",
