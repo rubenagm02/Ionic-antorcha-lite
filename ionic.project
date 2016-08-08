@@ -1,0 +1,10 @@
+{
+  "name": "AntorchaIonic",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/v1",
+      "proxyUrl": "http://api.antorcha.mx"
+    }
+]
+}

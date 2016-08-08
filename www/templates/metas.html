@@ -1,0 +1,34 @@
+<ion-view title="Metas" id="page5">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div class="button-bar">
+                <button id="metas-button83" class="button button-positive button-small button-block">Mis metas</button>
+                <a ui-sref="tabsController.especialistas" id="metas-button84" class="button button-positive button-small button-block button-outline">Especialistas</a>
+            </div>
+            <a ui-sref="tabsController.nuevaMeta" id="metas-button86" class="button button-assertive button-small button-block">Agregar nueva meta</a>
+            <div class="list card">
+                <div class="item item-body" ng-repeat="meta in metas">
+                    <form class="list">
+                        <h1 id="metas-heading10" style="color:#000000;font-weight:300;text-align:center;">{{meta.progreso}}%</h1>
+                        <ion-item class="range range-positive">
+                            <input type="range" value="{{meta.progreso}}" min="0" max="100" disabled>
+                        </ion-item>
+                        <div id="metas-markdown33" style="color:#000000;text-align:center;">
+                            <p>
+                                <strong>{{meta.nombre}}</strong>
+                            </p>
+
+                            <p>
+                                <strong>{{meta.inicio}} {{meta.tipoMedida}} </strong>Inicial -
+                                <strong>{{meta.fin}} {{meta.tipoMedida}} </strong>Meta</p>
+                        </div>
+                        <div class="spacer" style="width: 253px; height: 18px;"></div>
+                        <button id="metas-button90" class="button button-positive  button-clear" ng-click="actualizar({{meta}})">Actualizar</button>
+                        <!--<button id="metas-button80" class="button button-positive  button-clear">Modificar</button>-->
+                        <button id="metas-button81" class="button button-positive  button-clear" ng-click="eliminar({{meta}})">Borrar</button>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

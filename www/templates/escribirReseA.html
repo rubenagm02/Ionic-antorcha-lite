@@ -1,0 +1,27 @@
+<ion-view title="Califica el espacio" id="page13">
+    <ion-content overflow-scroll="true" padding="true" scroll="false" class="has-header">
+        <div id="escribirReseA-markdown27" style="color:#000000;text-align:center;">
+            <p>Califica este espacio para recomendarlo a mas personas o que los dueños sepan que deban mejorar</p>
+        </div>
+        <form class="list">
+            <!--<label class="item item-input">
+                <span class="input-label">Titulo</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Reseña</span><textarea placeholder=""> </textarea>
+            </label>-->
+            <label class="item item-select" name="Estrellas">
+                <span class="input-label">Calificación</span>
+                <select ng-model="puntuacion">
+                    <option value="1">1 Estrella</option>
+                    <option value="2">2 Estrellas</option>
+                    <option value="3">3 Estrellas</option>
+                    <option value="4">4 Estrellas</option>
+                    <option value="5">5 Estrellas</option>
+                </select>
+            </label>
+        </form>
+        <a ui-sref="tabsController.detallesEspacio" id="escribirReseA-button38" class="button button-assertive  button-block">Calificar</a>
+    </ion-content>
+</ion-view>

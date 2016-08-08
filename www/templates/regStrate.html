@@ -1,0 +1,45 @@
+<ion-view title="Regístrate" id="page8" style="background-color:#232C39;">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <button id="regStrate-button9" style="font-weight:;" class="button button-positive  button-block">Registrarse con Facebook</button>
+        <div class="spacer" style="width: 300px; height: 21px;"></div>
+        <form class="list" ng-controller="regStrateCtrl">
+            <h4 id="regStrate-heading2" style="color:#FFFFFF;">Crea una nueva cuenta</h4>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Nombre completo</span>
+                    <input type="text" placeholder="" ng-model="nombre" >
+                </label>
+                <!-- <label class="item item-input">
+                    <span class="input-label">Apellido</span>
+                    <input type="text" placeholder="">
+                </label>-->
+                <label class="item item-input">
+                    <span class="input-label">Correo electrónico</span>
+                    <input type="email" placeholder="" ng-model="correo" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Contraseña</span>
+                    <input type="password" placeholder="" ng-model="pass">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Fecha de nacimiento</span>
+                    <input type="date" placeholder="" ng-model="fechaNacimiento" ng-bind="fechaNacimiento | date : 'yyyy-MM-dd'" >
+                </label>
+                <label class="item item-select">
+                    <span class="input-label">Genero</span>
+                    <select ng-model="genero">
+                        <option value="H">Hombre</option>
+                        <option value="M">Mujer</option>
+                    </select>
+                </label>
+            </ion-list>
+            <!-- <a ui-sref="tabsController.buscarEspacios" ng-click="registro()" id="regStrate-button3" style="font-weight:;" class="button button-assertive  button-block">Registrate</a>-->
+            <a ng-click="registro()" id="regStrate-button3" style="font-weight:;" class="button button-assertive  button-block">Registrate</a>
+            <div id="regStrate-markdown2" style="color:#FFFFFF;text-align:center;">
+                <p>Al registrarte aceptas los
+                    <strong>términos y condiciones.</strong>
+                </p>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

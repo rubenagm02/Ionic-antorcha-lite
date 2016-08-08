@@ -1,0 +1,29 @@
+<ion-view title="Datos de perfil" id="page23">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list" >
+            <div class="spacer" style="width: 285px; height: 33px;"></div>
+            <ion-item class="item-divider">Personal</ion-item>
+            <label class="item item-input">
+                <span class="input-label">Nombre</span>
+                <input type="text" id="nombre" placeholder="" ng-model="miembro.nombre">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Fecha de nacimiento</span>
+                <input type="date" id="fechaNacimiento" placeholder="yyyy-mm-dd" ng-bind="miembro.fechaNacimiento | date : 'yyyy-MM-dd'" ng-model="miembro.fechaNacimiento">
+            </label>
+            <label class="item item-select">
+                <span class="input-label">Genero</span>
+                <select id="sexo" ng-model="miembro.sexo">
+                    <option value = "M" >Masculino</option>
+                    <option value = "F" >Femenino</option>
+                    <option value = "N/D" >N/D</option>
+                </select>
+            </label>
+            <ion-item class="item-divider">Sobre ti</ion-item> 
+            <label class="item item-input">
+                <input type="text" id="descrip" placeholder="Biografia o cita personal" ng-model="miembro.descripcion">
+            </label>
+            <a ui-sref="tabsController.miPerfil" id="datosDePerfil-button92" ng-click="editaInformacion(miembro)" class="button button-assertive  button-block">Guardar</a>
+        </form>
+    </ion-content>
+</ion-view>

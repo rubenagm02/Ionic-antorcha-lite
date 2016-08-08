@@ -1,0 +1,81 @@
+<ion-view title="Detalles Evento" id="page9">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <ion-list>
+            <ion-item class="item-thumbnail-left">
+                <img ng-src="{{evento.imagen}}">
+                <h2>{{evento.nombre}}</h2>
+                <!--<p>543 Personas asistiran</p>-->
+            </ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <div id="detallesEvento-markdown15" style="color:#000000;text-align:center;">
+            <p>
+                <strong>{{evento.fecha}}</strong>
+            </p>
+        </div>
+        <a href="tel:{{evento.telefono}}" id="detallesEvento-button29" class="button button-light  button-clear icon ion-ios-telephone"></a>
+        <a ui-sref="tabsController.expandeElFuego" id="detallesEvento-button30" class="button button-light  button-clear icon ion-share"></a>
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <div id="detallesEvento-markdown17" style="color:#000000;">
+            <p>
+                <strong>Lugar</strong>
+            </p>
+        </div>
+        <div id="detallesEvento-markdown18" style="color:#535353;">
+            <p>{{evento.direccion}}</p>
+        </div>
+        <button id="detallesEvento-button28" style="color:Default;" class="button button-light  button-clear icon ion-map"></button>
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <div id="detallesEvento-markdown19" style="color:#000000;">
+            <p>
+                <strong>Descripcion</strong>
+            </p>
+        </div>
+        <div id="detallesEvento-markdown20" style="color:#535353;">
+            <p>{{evento.descripcion}}</p>
+        </div>
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <!--<div id="detallesEvento-markdown21" style="color:#000000;">
+            <p>
+                <strong>Premios</strong>
+            </p>
+        </div>
+        <div id="detallesEvento-markdown22" style="color:#535353;">
+            <p>
+                <strong>1er Lugar.-</strong>Premio</p>
+
+            <p>
+                <strong>2er Lugar.-</strong>Premio</p>
+
+            <p>
+                <strong>3er Lugar.-</strong>Premio</p>
+
+            <p>
+                <strong>Todos los participantes.-</strong>Premio</p>
+        </div>-->
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <div style="text-align:center;">
+            <img src="img/69RYssnIRgajp3Pis4y3_Default-Espacio-320.jpg" width="100%" height="auto">
+        </div>
+        <button id="detallesEvento-button35" class="button button-light  button-clear icon ion-chevron-left"></button>
+        <button id="detallesEvento-button36" class="button button-light  button-clear icon ion-chevron-right"></button>
+        <div class="spacer" style="width: 285px; height: 23px;"></div>
+        <!--<div id="detallesEvento-markdown26" style="color:#000000;">
+            <p>
+                <strong>Precio</strong>
+            </p>
+        </div>
+        <form class="list">
+            <label class="item item-select">
+                <span class="input-label">Boleto</span>
+                <select>
+                    <option>Inscripción $50.00</option>
+                    <option>Boleto $100.00</option>
+                </select>
+            </label>
+            <div class="spacer" style="width: 285px; height: 23px;"></div>
+            <a ui-sref="tabsController.misActividades" id="detallesEvento-button37" class="button button-assertive  button-block">Agregar a calendario</a>
+        </form>-->
+         <a ng-click="agregarEvento({{evento}})" id="detallesEvento-button37" class="button button-assertive  button-block">Agregar a calendario</a>
+    </ion-content>
+</ion-view>

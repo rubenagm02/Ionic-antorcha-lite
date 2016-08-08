@@ -1,0 +1,42 @@
+<ion-view title="Mi perfil" id="page4" ng-controller="datosDePerfilCtrl">
+  <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
+    <div class="button-bar">
+      <button id="miPerfil-button52" class="button button-positive button-small button-block">Perfil</button>
+      <a ui-sref="tabsController.disciplinas" id="miPerfil-button53" class="button button-positive button-small button-block button-outline">Disciplinas</a>
+      <a ui-sref="tabsController.medallas" id="miPerfil-button54" class="button button-positive button-small button-block button-outline">Medallas</a>
+    </div>
+    <a style="display:inline-block;" ui-sref="tabsController.datosDePerfil">
+      <div style="text-align:center;">
+        <img src="img/dqDYcnAcRPutoKszpyG9_Default-Perfil-320.jpg" width="40%" height="auto">
+      </div>
+    </a>
+    <div id="miPerfil-markdown29" style="color:#000000;text-align:center;">
+      <p>{{miembro.nombre}}</p><p>{{miembro.fechaNacimiento.toUTCString()}}</p>
+    </div>
+    <div class="spacer" style="width: 285px; height: 24px;"></div>
+    <div id="miPerfil-markdown30" style="color:#000000;text-align:center;">
+      <!--<p>Practicando
+          <strong>Actividad</strong>en
+          <strong>Nombre de espacio</strong>
+      </p>
+
+      <p>Ciudad, Estado.</p>-->
+    </div>
+    <div class="spacer" style="width: 285px; height: 24px;"></div>
+    <div id="miPerfil-markdown31" style="color:#000000;text-align:center;">
+      <p>"{{miembro.queBusco}}"</p>
+    </div>
+    <div class="spacer" style="width: 285px; height: 24px;"></div>
+    <div id="miPerfil-markdown32" style="color:#000000;text-align:center;">
+      <p>
+        <strong>8 </strong>Medallas ganadas |
+        <strong>16 </strong>Metas cumplidas
+      </p>
+    </div>
+    <button id="miPerfil-button47" class="button button-light button-small">0 Prometeo</button>
+    <button id="miPerfil-button48" class="button button-light button-small">0 Antorcha</button>
+    <button id="miPerfil-button49" class="button button-light button-small">1 Fuego</button>
+    <button id="miPerfil-button50" class="button button-light button-small">2 Flama</button>
+    <button id="miPerfil-button51" class="button button-light button-small">5 Chispa</button>
+  </ion-content>
+</ion-view>

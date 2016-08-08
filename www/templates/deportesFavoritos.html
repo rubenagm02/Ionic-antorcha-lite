@@ -1,0 +1,17 @@
+<ion-view ng-controller="deportesFavoritosCtrl" title="Deportes favoritos" id="page18">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Busca un deporte">
+            </label>
+        </form>
+        <a ui-sref="tabsController.disciplinas" id="deportesFavoritos-button65" class="button button-positive  button-block">Guardar favoritos</a>
+        <ion-list>
+          <div ng-repeat="disciplina in disciplinas">
+            <ion-item  class="item-divider">{{ disciplina.nombre }}</ion-item>
+            <ion-toggle ng-repeat="deporte in deportes" on-tap="guardaDeporte({{deporte.id}})" toggle-class="toggle-positive">{{ deporte.nombre }}</ion-toggle>
+          </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

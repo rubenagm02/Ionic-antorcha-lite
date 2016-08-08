@@ -1,0 +1,33 @@
+<ion-view title="Medallas" id="page17">
+    <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
+        <div class="button-bar">
+            <a ui-sref="tabsController.miPerfil" id="medallas-button69" class="button button-positive button-small button-block button-outline">Perfil</a>
+            <a ui-sref="tabsController.disciplinas" id="medallas-button70" class="button button-positive button-small button-block button-outline">Disciplinas</a>
+            <button id="medallas-button71" class="button button-positive button-small button-block">Medallas</button>
+        </div>
+        <div style="text-align:center;">
+            <img src="img/medalla_{{imagen_medalla}}.png" width="60%" height="auto">
+        </div>
+        <div id="medallas-markdown10" style="color:#000000;text-align:center;">
+            <p>
+                <strong>{{tipo_medalla}}</strong>
+            </p>
+
+            <p>
+                <strong>{{nombre_medalla}}</strong>
+            </p>
+
+            <p>{{descripcion_medalla}}</p>
+        </div>
+        <button id="medallas-button78" class="button button-light  button-clear">{{cantidad_medallas}}</button>
+        <button id="medallas-flecha-izquierda" ng-click="cambiarMedallaIzquierda()" class="button button-light  button-clear icon ion-chevron-left"></button>
+        <button id="medallas-flecha-derecha" ng-click="cambiarMedallaDerecha()" class="button button-light  button-clear icon ion-chevron-right"></button>
+        <button id="medallas-button77" class="button button-light  button-clear icon ion-share"></button>
+        <div class="spacer" style="width: 285px; height: 17px;"></div>
+        <button id="medallas-button72" class="button button-light button-small">0 Prometeo</button>
+        <button id="medallas-button73" class="button button-light button-small">0 Antorcha</button>
+        <button id="medallas-button74" class="button button-light button-small">0 Fuego</button>
+        <button id="medallas-button75" class="button button-light button-small">0 Flama</button>
+        <button id="medallas-button76" class="button button-light button-small">0 Chispa</button>
+    </ion-content>
+</ion-view>

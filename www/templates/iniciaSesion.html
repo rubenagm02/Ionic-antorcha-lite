@@ -1,0 +1,23 @@
+<ion-view title="Inicia sesion" id="page7" style="background-color:#232C39;">
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list" ng-controller="iniciaSesionCtrl">
+            <div style="text-align:center;">
+                <img src="img/4moXN2BLQ32QDxJJkHZA_Isotipo-Antorcha.png" width="60%" height="auto">
+            </div>
+            <ion-list>
+                <label class="item item-input">
+                    <input type="email" placeholder="Correo electronico" ng-model="correo">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Contraseña" ng-model="pass">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 285px; height: 24px;"></div>
+            <button ng-click="logeo()" id="iniciaSesion-button1" style="font-weight:;" class="button button-assertive  button-block">Inicia sesion</button>
+            <a href="#" onclick="window.open('/signup', '_system', 'location=yes'); return false;" id="iniciaSesion-button2" style="font-weight:;" class="button button-light button-small button-block button-clear">¿Olvidaste tu contraseña?</a>
+            <!-- <button id="iniciaSesion-button39" class="button button-positive  button-block">Iniciar sesion con facebook</button>-->
+        </form>
+
+    </ion-content>
+</ion-view>

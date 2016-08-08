@@ -1,0 +1,50 @@
+<ion-view title="Especialistas" id="page21">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list" ng-controller="especialistasCtrl">
+            <div class="button-bar">
+                <a ui-sref="tabsController.metas" id="especialistas-button66" class="button button-positive button-small button-block button-outline">Mis metas</a>
+                <button id="especialistas-button82" class="button button-positive button-small button-block">Especialistas</button>
+            </div>
+            <label class="item item-select">
+                <span class="input-label"></span>
+                <select ng-model="municipio" >
+                    <option>Zapopan</option>
+                    <option>Guadalajara</option>
+                    <option>Tonala</option>
+                    <option>Tlaquepaque</option>
+                    <option>Tlajomulco</option>
+                </select>
+            </label>
+            <label class="item item-select">
+                <span class="input-label"></span>
+                <select ng-model="tipo">
+                    <option value="2">Fisioterapeuta</option>
+                    <option value="1">Nutriologo</option>
+                    <option value="3">Entrenador</option>
+                </select>
+            </label>
+            <button ng-click="buscaEspecialistas()" class="button button-positive button-small button-block">Buscar</button>
+            <div class="list card">
+                <div class="item item-body" ng-repeat="especialista in especialistas">
+                    <form class="list">
+                        <ion-item class="item-thumbnail-left">
+                            <img src="img/r2AzIi1RNXMXKl1pnwWA_Default-Perfil-Hombre-320.jpg">
+                            <h2>{{especialista.nombre}}</h2>
+                          <!--   <p>{{ especialidad }}Categoria</p>-->
+                        </ion-item>
+                        <div id="especialistas-markdown16" style="color:#000000;">
+                            <p>
+                                <strong> {{ especialista.titulo }} </strong>
+                            </p>
+
+                            <p>{{ especialista.descripcion }}</p>
+                        </div>
+                        <div class="spacer" style="width: 253px; height: 18px;"></div>
+                        <a href="mailto:{{ especialista.correo }}" id="especialistas-button87" class="button button-stable  button-clear icon ion-email"></a>
+                        <a href="tel:{{ especialista.telefono }}" id="especialistas-button88" class="button button-stable  button-clear icon ion-ios-telephone"></a>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

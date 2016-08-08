@@ -1,0 +1,23 @@
+<ion-view title="Mis eventos" id="page14">
+    <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
+        <!--<div class="button-bar">
+            <a ui-sref="tabsController.misActividades" id="misEventos-button31" style="font-weight:;" class="button button-positive button-small button-block button-outline">Espacios deportivos</a>
+            <button id="misEventos-button32" style="font-weight:;" class="button button-positive button-small button-block button-outline">Eventos</button>
+        </div>-->
+        <div class="list card">
+            <div class="item item-body" ng-repeat="evento in eventos">
+                <ion-list>
+                    <ion-item class="item-thumbnail-left">
+                        <img ng-src="{{evento.imagen}}">
+                        <h2>{{evento.nombre}}</h2>
+                        <p>{{evento.fecha}}</p>
+                    </ion-item>
+                </ion-list>
+                <button id="misEventos-button33" style="color:Default;" class="button button-stable  button-clear icon ion-more"></button>
+                <!--<a ui-sref="tabsController.detallesEspacio" id="misEventos-button44" style="color:Default;text-align:right;" class="button button-positive  button-clear">Locacion</a>-->
+                <a ng-click="invitar({{evento}})" id="misEventos-button45" style="color:Default;text-align:right;" class="button button-positive  button-clear">Invitar</a>
+            </div>
+        </div>
+        <ion-list></ion-list>
+    </ion-content>
+</ion-view>
