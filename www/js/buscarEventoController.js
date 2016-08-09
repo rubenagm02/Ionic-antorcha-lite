@@ -17,7 +17,7 @@ var app = angular.module('app.controllers')
         	var evento = {};
         	evento = response[x];
         	evento.fecha = formatoFecha(response[x].fechaInicio);
-            evento.imagen = 'http://admin.antorcha.mx/img/eventos/eventosevento_' + evento.id + '_1_.png';
+            evento.imagen = 'http://imagenesantorcha.esy.es/eventos/eventosevento_' + evento.id + '_1_.png';
         	$scope.eventos.push(evento);
         }
 
