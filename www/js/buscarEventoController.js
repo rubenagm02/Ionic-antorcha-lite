@@ -6,7 +6,7 @@ var app = angular.module('app.controllers')
     
     $http({
         method : "GET",
-        url : "http://api.antorcha.mx/V0.1/eventosDeportivos",
+        url : "http://ec2-52-32-201-243.us-west-2.compute.amazonaws.com/V0.1/eventosDeportivos",
         data:  credenciales,
     })
     .success(function(response){
@@ -23,7 +23,7 @@ var app = angular.module('app.controllers')
 
     })
     .error(function(){
-        console.log(response);
+        console.log();
     });
 
     $scope.detalleEvento = function (evento) {

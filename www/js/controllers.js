@@ -11,9 +11,7 @@ var app = angular.module('app.controllers', [])
 
     var inicio = window.localStorage.getItem("inicio");
 
-    if (inicio = "iniciado") {
-      $location.path('/page1/page10');
-    }
+    console.log(inicio);
 
     $scope.iniciar = function () {
       window.localStorage.setItem("inicio", "iniciado");

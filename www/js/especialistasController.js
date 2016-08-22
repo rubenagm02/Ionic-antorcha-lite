@@ -7,7 +7,7 @@ var app = angular.module('app.controllers')
 
       $http({
           method : "GET",
-          url : "http://api.antorcha.mx/V0.1/xEspecialidad/" + $scope.tipo + "/" + $scope.municipio ,
+          url : "http://ec2-52-32-201-243.us-west-2.compute.amazonaws.com/V0.1/xEspecialidad/" + $scope.tipo + "/" + $scope.municipio ,
           data:  credenciales,
       })
       .success(function(response){

@@ -7,7 +7,7 @@
 
 <ion-view title="Buscar Espacios" id="page2" style="background-color:Default;">
 
-  <ion-content overflow-scroll="false" padding="false" scroll="false" class="has-header">
+  <ion-content overflow-scroll="true" padding="false" scroll="true" class="has-header">
     <div class="button-bar" ><!-- ng-init="inicializar()"-->
       <button id="buscarEspacios-button10" style="font-weight:;" class="button button-positive button-small button-block">Espacios</button>
       <a href="#/page1/page10" ui-sref="tabsController.buscarEventos" id="buscarEspacios-button11" style="font-weight:;" class="button button-positive button-small button-block button-outline">Eventos</a>
@@ -16,7 +16,7 @@
     <div>
       <p>
         <!--<ion-content ng-controller="buscarEspaciosCtrl">-->
-          <div id="map" ng-model="map" data-tap-disabled="true"   style="width: 1500px;height: 500px">
+          <div id="map" ng-model="map" data-tap-disabled="false"   style="width: 1500px;height: 500px">
 
           </div>
         <!--</ion-content>-->

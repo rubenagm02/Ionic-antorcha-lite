@@ -132,7 +132,7 @@ var app = angular.module('app.controllers')
 
       var metas = window.localStorage.getItem("metas");
 
-      if (metas.length > 10) {
+      if (metas != null && metas.length > 10) {
       	metas = JSON.parse(String(window.localStorage.getItem("metas")));
       } else {
       	metas = [];
