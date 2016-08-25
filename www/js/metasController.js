@@ -1,6 +1,24 @@
 var app = angular.module('app.controllers')
 
-.controller('metasCtrl', function($scope, $http, $ionicPopup) {
+.controller('metasCtrl', function($scope, $http, $ionicPopup, $rootScope) {
+  // Resume refresh
+   $scope.$on('$stateChangeSuccess', 
+function(event, toState, toParams, fromState, fromParams){ 
+    var metas = window.localStorage.getItem("metas");
+
+    if (toState.name == "tabsController.metas")
+    {
+
+
+      if (metas != null && metas.length > 10) {
+        metas = JSON.parse(String(window.localStorage.getItem("metas")));
+      } else {
+        metas = [];
+      }
+      $scope.metas = metas;
+    }
+})
+
 	//URL http://api.antorcha.mx/V0.1/metas/
 	//http://api.antorcha.mx/V0.1/metaProgresos/
 	/*var usuario = JSON.parse(window.localStorage.getItem("usuario"));
@@ -77,28 +95,35 @@ var app = angular.module('app.controllers')
 	      });
 
 	      myPopup.then(function(res) {
-	         console.log('Tapped!' + meta.id, parseInt(res, 10));
 
-	         	res = parseFloat(res, 10)
-	          var metas = window.localStorage.getItem("metas");
+	         	if (res != null && res > 0) {
+              res = parseFloat(res, 10)
+            var metas = window.localStorage.getItem("metas");
 
-		      if (metas.length > 10) {
-		      	metas = JSON.parse(String(window.localStorage.getItem("metas")));
-		      } else {
-		      	metas = [];
-		      }
+          if (metas.length > 10) {
+            metas = JSON.parse(String(window.localStorage.getItem("metas")));
+          } else {
+            metas = [];
+          }
 
-		      var avance = 0.0;
-		      if (meta.inicio > meta.fin) {
+          var avance = 0.0;
+          if (meta.inicio > meta.fin) {
                     avance = (100 / (parseFloat(meta.inicio, 10) - parseFloat(meta.fin, 10))) * (parseFloat(meta.inicio, 10) - res);
                 } else {
-                    avance = (100 / (parseFloat(meta.fin, 10) - parseFloat(meta.inicio, 10))) * (res - parseFloat(meta.fin, 10));
+                    avance = (100 / (parseFloat(meta.fin, 10) - parseFloat(meta.inicio, 10))) * (res - parseFloat(meta.inicio, 10));
                 }
 
-		      metas[meta.id - 1].progreso = avance;
 
-		      $scope.metas = metas;
-		      window.localStorage.setItem("metas", JSON.stringify(metas));
+          for (var x = 0; x < metas.length; x++) {
+
+            if (metas[x].id == meta.id) {
+              metas[x].progreso = parseFloat(avance).toFixed( 2 );
+            }
+          }
+
+          $scope.metas = metas;
+          window.localStorage.setItem("metas", JSON.stringify(metas));
+            }
 	      });   
      }
 
@@ -120,9 +145,18 @@ var app = angular.module('app.controllers')
 	      	metas = [];
 	      }
 
-	      metas.splice(meta.id - 1, meta.id);
-	      $scope.metas = metas;
-	      window.localStorage.setItem("metas", JSON.stringify(metas));
+        var metasFinal = [];
+
+        for (var x = 0; x < metas.length; x++) {
+
+          if (metas[x].id != meta.id)
+          {
+            metasFinal.push(metas[x]);
+          }
+        }
+
+	      $scope.metas = metasFinal;
+	      window.localStorage.setItem("metas", JSON.stringify(metasFinal));
 	     } else {
 	       console.log('You are not sure');
 	     }
@@ -130,14 +164,7 @@ var app = angular.module('app.controllers')
 	 };
      
 
-      var metas = window.localStorage.getItem("metas");
-
-      if (metas != null && metas.length > 10) {
-      	metas = JSON.parse(String(window.localStorage.getItem("metas")));
-      } else {
-      	metas = [];
-      }
-      $scope.metas = metas;
+      
 })
 
 

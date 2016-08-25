@@ -20,6 +20,8 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     }
 
   });
+
+  
 })
 
 .factory('pinsEspacios', function($http) {
